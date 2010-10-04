@@ -4,7 +4,7 @@ Django Postcodes
 
 Imports all UK postcodes from Codepoint CSV with Location Data for use with GeoDjango.
 
-Work in progress
+Work in progress...
 
 TODO:
 
