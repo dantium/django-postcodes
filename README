@@ -1,0 +1,12 @@
+================
+Django Postcodes
+================
+
+Imports all UK postcodes from Codepoint CSV with Location Data for use with GeoDjango.
+
+Work in progress
+
+TODO:
+
+*Reverse geo-coding for street, area etc
+
