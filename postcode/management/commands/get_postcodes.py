@@ -26,9 +26,7 @@ class Command(BaseCommand):
             c = csv.reader(s.readlines())
             for row in c:
                 postcode = row[0]
-                lat = float(row[2])
-                lng = float(row[3])
-                location = Point(lng, lat)
+                location = Point(map(float, row[10:12]))
                 Postcode.objects.create(code=postcode, location=location)
                 count += 1
                 if count % 10000 == 0:

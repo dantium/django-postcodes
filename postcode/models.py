@@ -9,7 +9,7 @@ from django.contrib.gis.db import models
 
 class Postcode(models.Model):
     code = models.CharField(max_length=8, db_index=True)
-    location = models.PointField()  
+    location = models.PointField(srid=27700)  
     
     objects = models.GeoManager()
     
