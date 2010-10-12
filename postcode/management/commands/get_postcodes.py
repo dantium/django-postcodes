@@ -26,10 +26,12 @@ class Command(BaseCommand):
             c = csv.reader(s.readlines())
             for row in c:
                 postcode = row[0]
-                location = Point(map(float, row[10:12]))
+                location = Point(map(float, row[10:12]), srid=27700)
                 Postcode.objects.create(code=postcode, location=location)
                 count += 1
                 if count % 10000 == 0:
                     print "Imported %d" % count
             s.close()
+            del c
             nprog = n+1
+    
